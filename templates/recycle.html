@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+  >
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../static/css/style.css">
+  <title>Karbon Ayak İzi</title>
+</head>
+<body>
+  <header class="header">
+    <div class="header__text">
+      <h1 class = "titl">Karbon ayak izinizi hesaplayın!</h1>
+      <p class = "titl">Teste girin ve iklim değişikliği sorununu çözün</p>
+    </div>
+  </header>
+  <main>
+    <h2 class="main__title">Geri dönüşümlü ürünler tercih ediyor musun</h2>
+    <ul class="list" id="list">
+      <li class="list__item">
+        <a href="{{ url_for('garbage', puan=1) }}">
+          <img class="item__img" src="../static/img/geri.png" alt="Geri Dönüşüm">
+          <span>Her zaman</span></a>
+      </li>
+      <!--Görev #2 -->
+      <li class="list__item">
+        <a href="{{ url_for('garbage', puan=3) }}">
+          <img class="item__img" src="../static/img/geri.png" alt="Geri Dönüşüm">
+          <span>Çoğunlukla</span></a>
+      </li>
+      <li class="list__item">
+        <a href="{{ url_for('garbage', puan=5) }}">
+          <img class="item__img" src="../static/img/geri.png" alt="Geri Dönüşüm">
+          <span>Bazen</span></a>
+
+      </li>
+      <li class="list__item">
+        <a href="{{ url_for('garbage', puan=7) }}">
+          <img class="item__img" src="../static/img/geri.png" alt="Geri Dönüşüm">
+            <span>Umursamıyorum</span></a>
+    </ul>
+    
+  </main>
+  <footer>
+
+  </footer>
+</body>
+</html>
