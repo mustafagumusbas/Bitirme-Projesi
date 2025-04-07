@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+  >
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../static/css/style.css">
+  <title>Karbon Ayak İzi</title>
+</head>
+<body>
+  <header class="headar">
+    <div class="headar__text">
+      <h1 class = "titl">Karbon ayak izinizi hesaplayın!</h1>
+      <p class = "titl">Teste girin ve iklim değişikliği sorununu çözün</p>
+    </div>
+  </header>
+  <main>
+    <h2 class="main__title main__title--margin">Karbon ayak izinizin seviyesi:</h2>
+    <div class="main__rez" id="end">
+      {% if puan <= 23 %}
+        <img class="soni" src="../static/img/iyi.png" alt="İyi Seviye">
+        <h3>Karbon ayak iziniz son derece düşük!</h3>
+      {% elif puan > 23 and puan < 46 %}
+        <img class="sonu" src="../static/img/orta.png" alt="Orta Seviye">
+        <h3>Karbon ayak iziniz dünya ortalamasında!</h3>
+      {% else %}
+        <img class="sonı" src="../static/img/kötü.png" alt="Kötü Seviye">
+        <h3>Karbon ayak iziniz son derece fazla!</h3>
+      {% endif %}
+    
+    <div class="button__container">
+      <a class="btn" href="{{ url_for('static', filename='img/guide.png') }}" target="_blank">
+        Eğer karbon ayak izini azaltmak istiyorsan buna tıkla
+      </a>
+    </div>
+    <div class="button__container">
+      <a class="btn" href="{{ url_for('index') }}">Ana Sayfaya Dön</a>
+    </div>
+  </main>
+  <footer>
+  </footer>
+</body>
+</html>
